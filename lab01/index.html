@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form{
+            width: 380px;
+        }
+        form>div>div,form>#CityListDiv,form>div>input[type="checkbox"]{
+            display: flex;
+            justify-content: space-between;
+        }
+        form>#Study{
+            margin-top: 15px;
+        }
+        #Study>div>input[type="checkbox"]{
+            position: relative;
+            right: 144px
+        }
+        form>div>p{
+            margin: 3px 0 8px 0
+        }
+        #CityListDiv>select,input[type="text"]{
+            width: 160px;
+            height: 21px;
+        }
+        #coursesDiv{
+            position: relative;
+            right: 37px;
+        }
+        #Info>div>textarea{
+            height: 70px;
+            width: 160px;
+            resize: none;
+        }
+        #Info p{
+            position: relative;
+            bottom: 50px;
+        }
+        p{
+            font-size: 14px;
+            color: red;
+        }
+        form>div{
+            height: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+    <body>
+        <form id="form">
+            <div id="Surname">
+                <div>
+                    <label for="Surname">Фамилия</label>
+                    <input type="text" placeholder="Фамилия">
+                </div>
+                <p></p>
+            </div>
+            <div id="Name">
+                <div>
+                    <label for="Name">Имя</label>
+                    <input type="text" placeholder="Имя">
+                </div>
+                <p></p>
+            </div>
+            <div id="Email">
+                <div>
+                    <label for="Email">E-mail</label>
+                    <input type="text" placeholder="@xxxxx.xxx">
+                </div>
+                <p></p>
+            </div>
+            <div id="Phone">
+                <div>
+                    <label for="Phone">Телефон</label>
+                    <input type="text" placeholder="(0xx)xxx-xx-xx">
+                </div>
+                <p></p>
+            </div>
+            <div id="CityListDiv">
+                <label for="City">Город</label>
+                <select id="citylist">
+                    <option value="Minsk">Minsk</option>
+                    <option value="Grodno">Grodno</option>
+                    <option value="Brest">Brest</option>
+                    <option value="Gomel">Gomel</option>
+                    <option value="Mogilev">Mogilev</option>
+                </select>
+            </div>
+            <div id="Study">
+                <div>
+                    <label for="Study">Я учусь в БГТУ?</label>
+                    <input type="checkbox">
+                </div>
+                <p></p>
+            </div>
+            <div id="Courses">
+                <div>
+                    <label for="Courses">На каком курсе учитесь?</label>  
+                    <div id="coursesDiv">
+                        <input type="radio" name="corses" id="radio1"><span>1</span>
+                        <input type="radio" name="corses" id="radio2"><span>2</span>
+                        <input type="radio" name="corses" id="radio3"><span>3</span>
+                        <input type="radio" name="corses" id="radio4"><span>4</span>
+                    </div>  
+                </div>
+                <p></p>
+            </div>
+            <div id="Info">
+                <div>
+                    <label for="Info">Расскажите о себе:</label>
+                    <textarea name="" id="" cols="25" rows="10" placeholder="Расскажите о себе"></textarea>
+                </div>
+                <p></p>
+            </div>
+
+            <div id="CheckButton">
+                <input type="submit" value="Проверить" id="submitButton">
+            </div>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>
