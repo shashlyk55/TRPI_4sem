@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+        }
+        #params{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 220px;
+            margin-bottom: 100px;
+        }
+        #params>div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        #params>div>input{
+            margin-left: 20px;
+            width: 60px;
+        }
+        #result{
+            margin-left: 30px;
+        }
+        #result input{
+            margin-left: 10px;
+            width: 60px;
+        }
+        #saveButton{
+            width: 80px;
+            height: 20px;
+        }
+
+        #container{
+            /*margin-top: 80px;
+            margin-bottom: 50px;*/
+        }
+        #naperstok1,#naperstok2,#naperstok3{
+            position: relative;
+            bottom: 0px;
+            width: 95px;
+            height: 120px;
+            z-index: 3;
+            position: relative;
+            bottom: 0px;
+        }
+        
+        #circle{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            /*bottom: 55px;*/
+            bottom: 100px;
+            left: 0px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="params">
+            <div>
+                <label for="">Высота наперстка</label><input type="text" id="inputHeight">
+            </div>
+            <div>
+                <label for="">Ширина наперстка</label><input type="text" id="inputWidth">
+            </div>
+            <div>
+                <label for="">Диаметр шарика</label><input type="text" id="inputDiametr">
+            </div>
+            <button id="saveButton">Сохранить</button>
+        </div>
+        <div id="result">
+            <label for="">Результат <span id="counter">0</span></label>
+            <p></p>
+        </div>
+    </form>
+
+    <div id="container">
+        <img src="naperstok.jpg" alt="0" id="naperstok1">
+        <img src="naperstok.jpg" alt="1" id="naperstok2">
+        <img src="naperstok.jpg" alt="2" id="naperstok3">
+        
+        <div id="circle"></div>
+        
+    </div>
+
+    <input type="submit" value="Обновить" id="updateButton">
+
+
+</body>
+<script src="script.js"></script>
+</html>
