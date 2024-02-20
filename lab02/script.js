@@ -23,10 +23,10 @@ saveButton.addEventListener('click', function(event){
 
     naperstokHeight = document.getElementById('inputHeight').value
     naperstokWidth = document.getElementById('inputWidth').value
-    if(document.getElementById('inputDiametr').value > 95){
+    /*if(document.getElementById('inputDiametr').value > 95){
         score.textContent += " Недопустимый размер шарика (> 95)"
         return;
-    }
+    }*/
     ballDiametr = document.getElementById('inputDiametr').value
     randPlace = Math.floor(Math.random()*3)
 
