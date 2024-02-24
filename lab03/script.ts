@@ -96,7 +96,7 @@ let mediana : number
 if(nums.length % 2 == 0)
     mediana = (nums[nums.length / 2] + nums[(nums.length / 2) - 1]) / 2
 else
-    mediana = nums[nums.length / 2]
+    mediana = nums[--nums.length / 2]
 
 console.log(mediana)
 

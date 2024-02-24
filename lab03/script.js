@@ -88,12 +88,11 @@ console.log(res + "");
  Объяснение: объединение массивов = [1,2,3,4], медиана (2 + 3) / 2 = 2.5.
  */
 let nums1 = [1, 2];
-let nums2 = [3, 4];
+let nums2 = [3, 4, 2];
 let nums = [...nums1, ...nums2];
-
 let mediana;
 if (nums.length % 2 == 0)
     mediana = (nums[nums.length / 2] + nums[(nums.length / 2) - 1]) / 2;
 else
-    mediana = nums[nums.length / 2];
+    mediana = nums[--nums.length / 2];
 console.log(mediana);
