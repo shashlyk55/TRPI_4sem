@@ -8,16 +8,14 @@
 
 // task 1
 abstract class Product{
+    protected _id:number
+    protected _cost:number
+    protected _color:String
+    protected _size:number
 
-    private _id:number
-    private _cost:number
-    private _color:String
-    private _size:number
-    private _finalCost:number
-
-    private static _discount: number = 0
+    protected static _discount: number = 0
     static get discount(): number{
-        return this.discount
+        return this._discount
     }
     static set discount(value: number) {
         this._discount = value;
@@ -35,33 +33,34 @@ abstract class Product{
         return this._cost;
     }
     get finalCost(): number {
-        return this._finalCost;
+        return this._cost - Product._discount;
     }
     protected constructor(id:number,cost:number,size:number,color:String){
         this._id = id
         this._cost = cost
         this._color = color
         this._size = size
-        this._finalCost = cost - Product._discount
     }
+
 }
-
-
 
 class Boots extends Product {
     constructor(id:number,cost:number,size:number,color:String){
         super(id,cost, size, color)
     }
+
 }
 class Shoes extends Product {
     constructor(id:number,cost:number,size:number,color:String){
         super(id,cost, size, color)
     }
+
 }
 class Sandals extends Product{
     constructor(id:number,cost:number,size:number,color:String){
         super(id,cost, size, color)
     }
+
 }
 
 
@@ -110,22 +109,20 @@ class ProductStorage{
 }
 
 
-
 let storage = new ProductStorage()
 let boots1:Product = new Boots(1,150, 40, "red")
-
+console.log(boots1.finalCost)
 Product.discount = 100
 
 let boots2:Product = new Boots(2,100, 40, "yellow")
 let shoes1:Product = new Shoes(3,120, 40, "blue")
-
+console.log(shoes1.finalCost);
 storage.Add(boots1)
 storage.Add(shoes1)
 storage.Add(boots2)
 
 for(let item of storage){
-    //if(item != null)
-        console.log(item)
+    console.log(item)
 }
 
 for(let item of storage.CostFilter(110, 160)){

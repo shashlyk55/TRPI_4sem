@@ -9,7 +9,7 @@
 // task 1
 class Product {
     static get discount() {
-        return this.discount;
+        return this._discount;
     }
     static set discount(value) {
         this._discount = value;
@@ -27,14 +27,13 @@ class Product {
         return this._cost;
     }
     get finalCost() {
-        return this._finalCost;
+        return this._cost - Product._discount;
     }
     constructor(id, cost, size, color) {
         this._id = id;
         this._cost = cost;
         this._color = color;
         this._size = size;
-        this._finalCost = cost - Product._discount;
     }
 }
 Product._discount = 0;
@@ -97,14 +96,15 @@ class ProductStorage {
 }
 let storage = new ProductStorage();
 let boots1 = new Boots(1, 150, 40, "red");
+console.log(boots1.finalCost);
 Product.discount = 100;
 let boots2 = new Boots(2, 100, 40, "yellow");
 let shoes1 = new Shoes(3, 120, 40, "blue");
+console.log(shoes1.finalCost);
 storage.Add(boots1);
 storage.Add(shoes1);
 storage.Add(boots2);
 for (let item of storage) {
-    //if(item != null)
     console.log(item);
 }
 for (let item of storage.CostFilter(110, 160)) {
