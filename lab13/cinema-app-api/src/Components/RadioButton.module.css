@@ -1,0 +1,7 @@
+input[type="radio"]{
+    margin: 28px 15px 0 5px;
+}
+label{
+    font-size: 20px;
+    color: azure;
+}

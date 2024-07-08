@@ -1,0 +1,6 @@
+.catalog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 14% 0 14%;
+}
