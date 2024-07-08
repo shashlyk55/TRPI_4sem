@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+    height: 100px;
+    background: #ff9100;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu>li{
+    display: inline-block;
+    margin-right: 16px;
+}
+.menu a{
+    color: azure;
+    font-size: 20px;
+    text-decoration: none;
+}
