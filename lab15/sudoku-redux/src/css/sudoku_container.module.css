@@ -1,0 +1,15 @@
+.grid {
+    margin: auto;
+    height: 200px;
+    flex: 0 0 300px;
+    margin: 0;
+}
+.game {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+

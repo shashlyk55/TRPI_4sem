@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.row:nth-child(3n) {
+    border-bottom: 4px solid black;
+}
+.row:nth-child(1) {
+    border-top: 4px solid black;
+}

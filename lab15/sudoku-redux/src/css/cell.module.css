@@ -1,0 +1,48 @@
+    .cell{
+    display: inline-block;
+    cursor: pointer;
+    user-select: none ;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid black;
+    color: black;
+    }
+    .default {  
+    background: white;
+    }
+    .default:focus{
+        background: #b4e3b4;
+    }
+    
+    .squareGood {
+    background: white;
+    }
+    .squareGood:focus{
+        background: rgb(178, 178, 178);
+    }
+    
+    .squareGoodBut {
+    background: rgb(195, 23, 23);
+    }
+    
+    .squareBad {
+    background: #f12d2d;
+    }
+
+    .squareSolved {
+    background: #ffff22;
+    }
+    
+    div:nth-child(3n) {
+        border-right: 4px solid black;
+    }
+    div:nth-child(1) {
+        border-left: 4px solid black;
+    }
+    
+
+
